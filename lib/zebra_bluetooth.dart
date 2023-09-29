@@ -3,7 +3,7 @@ import 'zebra_bluetooth_platform_interface.dart';
 class ZebraBluetooth {
   final ZebraBluetoothPlatform _platform = ZebraBluetoothPlatform.instance;
 
-  ZebraBluetooth(void Function(String? error) onPrintResponse) {
+  ZebraBluetooth({required void Function(String? error) onPrintResponse}) {
     _platform.setOnPrintResponse(onPrintResponse);
   }
 
