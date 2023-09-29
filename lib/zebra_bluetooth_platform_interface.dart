@@ -26,4 +26,24 @@ abstract class ZebraBluetoothPlatform extends PlatformInterface {
   Future<String?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
+
+  // return the list of printer device names
+  Future<List<String>> onDiscovery() {
+    throw UnimplementedError('onDiscovery() has not been implemented.');
+  }
+
+  // the response of this method is handled by the ZebraResponse class
+  Future<void> printZPLOverBluetooth(
+    String zpl,
+    String printer,
+  ) {
+    throw UnimplementedError(
+        'printZPLOverBluetooth() has not been implemented.');
+  }
+
+  void setOnPrintResponse(
+    void Function(String? error) onPrintResponse,
+  ) {
+    throw UnimplementedError('setOnPrintResponse() has not been implemented.');
+  }
 }
